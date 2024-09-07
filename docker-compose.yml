@@ -111,9 +111,10 @@ services:
       - postgres
     environment:
       - LOAD_EX=n
-      - EXECUTOR=Sequential
+      - EXECUTOR=LocalExecutor  # Use LocalExecutor for parallel execution
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
-      - AIRFLOW_WEBSERVER_SECRET_KEY=this_is_a_very_secured_key
+      - AIRFLOW_WEBSERVER_SECRET_KEY=a2bafb49c5e2fcaa0892f29dd95f796d
+      - AIRFLOW__LOGGING__REMOTE_LOGGING=False  # Set remote logging to false
     logging:
       options:
         max-size: 10m
@@ -122,18 +123,15 @@ services:
       - type: bind
         source: ./dags
         target: /opt/airflow/dags
-        bind:
-          create_host_path: false
       - type: bind
         source: ./script/entrypoint.sh
         target: /opt/airflow/script/entrypoint.sh
-        bind:
-          create_host_path: false
       - type: bind
         source: ./requirements.txt
         target: /opt/airflow/requirements.txt
-        bind:
-          create_host_path: false
+      - type: bind
+        source: ./logs
+        target: /opt/airflow/logs
     ports:
       - "8080:8080"
     healthcheck:
@@ -153,26 +151,26 @@ services:
       - type: bind
         source: ./dags
         target: /opt/airflow/dags
-        bind:
-          create_host_path: false
       - type: bind
         source: ./script/entrypoint.sh
         target: /opt/airflow/script/entrypoint.sh
-        bind:
-          create_host_path: false
       - type: bind
         source: ./requirements.txt
         target: /opt/airflow/requirements.txt
-        bind:
-          create_host_path: false
+      - type: bind
+        source: ./logs
+        target: /opt/airflow/logs
     environment:
       - LOAD_EX=n
-      - EXECUTOR=Sequential
+      - EXECUTOR=LocalExecutor  # Use LocalExecutor here too
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
-      - AIRFLOW_WEBSERVER_SECRET_KEY=this_is_a_very_secured_key
+      - AIRFLOW_WEBSERVER_SECRET_KEY=a2bafb49c5e2fcaa0892f29dd95f796d
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/airflow/logs  # Log folder
+      - AIRFLOW__LOGGING__REMOTE_LOGGING=False
     command: bash -c "pip install -r ./requirements.txt && airflow db upgrade && airflow scheduler"
     networks:
       - confluent
+
 
   postgres:
     image: postgres:14.0

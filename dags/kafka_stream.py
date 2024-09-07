@@ -1,4 +1,4 @@
-import uuid
+
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -24,7 +24,7 @@ def get_data():
 def format_data(res):
     data = {}
     location = res['location']
-    data['id'] = uuid.uuid4()
+    data['id'] = "12"
     data['first_name'] = res['name']['first']
     data['last_name'] = res['name']['last']
     data['gender'] = res['gender']
@@ -42,7 +42,7 @@ def format_data(res):
 
 def stream_data():
    
-    producer = KafkaProducer(bootstrap_servers=['broker:29092'], max_block_ms=5000)
+    producer = KafkaProducer(bootstrap_servers=['localhost:9092'], max_block_ms=5000)
     curr_time = time.time()
 
     while True:
