@@ -1,6 +1,10 @@
 import scrapy
 from kafka import KafkaProducer
 import json
+from datetime import timedelta
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.utils.dates import days_ago
 
 class YaoumSpider(scrapy.Spider):
     name = 'yaoum'
@@ -24,3 +28,4 @@ class YaoumSpider(scrapy.Spider):
                 data = {'title': title, 'link': link}
                 self.producer.send('yaoum', data)  # Replace with your topic name
                 self.producer.flush()
+
