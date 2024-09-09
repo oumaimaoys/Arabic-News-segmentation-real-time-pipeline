@@ -1,0 +1,15 @@
+[2024-09-09 09:52:27,342] {scheduler_job.py:182} INFO - Started process (PID=53) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:27,343] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2024-09-09 09:52:27,344] {logging_mixin.py:104} INFO - [2024-09-09 09:52:27,344] {dagbag.py:451} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:27,358] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:27,444] {logging_mixin.py:104} INFO - [2024-09-09 09:52:27,443] {dag.py:1824} INFO - Sync 1 DAGs
+[2024-09-09 09:52:27,456] {logging_mixin.py:104} INFO - [2024-09-09 09:52:27,456] {dag.py:1843} INFO - Creating ORM DAG for example_xcom
+[2024-09-09 09:52:27,464] {logging_mixin.py:104} INFO - [2024-09-09 09:52:27,464] {dag.py:2280} INFO - Setting next_dagrun for example_xcom to 2024-09-07 00:00:00+00:00
+[2024-09-09 09:52:27,484] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py took 0.145 seconds
+[2024-09-09 09:52:58,094] {scheduler_job.py:182} INFO - Started process (PID=82) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:58,095] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2024-09-09 09:52:58,096] {logging_mixin.py:104} INFO - [2024-09-09 09:52:58,096] {dagbag.py:451} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:58,107] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+[2024-09-09 09:52:58,128] {logging_mixin.py:104} INFO - [2024-09-09 09:52:58,127] {dag.py:1824} INFO - Sync 1 DAGs
+[2024-09-09 09:52:58,144] {logging_mixin.py:104} INFO - [2024-09-09 09:52:58,144] {dag.py:2280} INFO - Setting next_dagrun for example_xcom to 2024-09-07 00:00:00+00:00
+[2024-09-09 09:52:58,158] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py took 0.067 seconds

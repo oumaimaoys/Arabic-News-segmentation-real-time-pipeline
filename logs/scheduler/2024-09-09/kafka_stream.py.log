@@ -1,0 +1,28 @@
+[2024-09-09 09:52:26,518] {scheduler_job.py:182} INFO - Started process (PID=41) to work on /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:26,519] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/kafka_stream.py for tasks to queue
+[2024-09-09 09:52:26,521] {logging_mixin.py:104} INFO - [2024-09-09 09:52:26,521] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:26,530] {logging_mixin.py:104} INFO - [2024-09-09 09:52:26,529] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/kafka_stream.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_stream.py", line 7, in <module>
+    from kafka import KafkaProducer
+ModuleNotFoundError: No module named 'kafka'
+[2024-09-09 09:52:26,531] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:26,570] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/kafka_stream.py took 0.058 seconds
+[2024-09-09 09:52:57,570] {scheduler_job.py:182} INFO - Started process (PID=71) to work on /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:57,571] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/kafka_stream.py for tasks to queue
+[2024-09-09 09:52:57,572] {logging_mixin.py:104} INFO - [2024-09-09 09:52:57,572] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:57,581] {logging_mixin.py:104} INFO - [2024-09-09 09:52:57,580] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/kafka_stream.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_stream.py", line 7, in <module>
+    from kafka import KafkaProducer
+ModuleNotFoundError: No module named 'kafka'
+[2024-09-09 09:52:57,581] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_stream.py
+[2024-09-09 09:52:57,600] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/kafka_stream.py took 0.033 seconds
