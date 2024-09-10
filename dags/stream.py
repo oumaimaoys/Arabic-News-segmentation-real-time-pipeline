@@ -11,7 +11,7 @@ import logging
 def scrape_hespress():
     try:
         producer = KafkaProducer(
-            bootstrap_servers=['localhost:9092'],  # Adjust the Kafka broker address
+            bootstrap_servers=['broker:29092'],  # Adjust the Kafka broker address
             value_serializer=lambda v: json.dumps(v).encode('utf-8')
         )
         
@@ -40,7 +40,7 @@ def scrape_hespress():
 def scrape_massae():
     try :
         producer = KafkaProducer(
-            bootstrap_servers=['localhost:9092'],  # Adjust the Kafka broker address
+            bootstrap_servers=['broker:29092'],  # Adjust the Kafka broker address
             value_serializer=lambda v: json.dumps(v).encode('utf-8')
         )
 
@@ -68,7 +68,7 @@ def scrape_massae():
 def scrape_yaoum():
     try :
         producer = KafkaProducer(
-            bootstrap_servers=['localhost:9092'],  # Adjust the Kafka broker address
+            bootstrap_servers=['broker:29092'],  # Adjust the Kafka broker address
             value_serializer=lambda v: json.dumps(v).encode('utf-8')
         )
 
