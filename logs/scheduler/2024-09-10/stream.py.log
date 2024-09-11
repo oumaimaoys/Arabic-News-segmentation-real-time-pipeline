@@ -4268,3 +4268,13 @@ SyntaxError: EOF while scanning triple-quoted string literal
 [2024-09-10 21:03:59,177] {logging_mixin.py:115} INFO - [2024-09-10 21:03:59,177] {dag.py:2379} INFO - Sync 1 DAGs
 [2024-09-10 21:03:59,208] {logging_mixin.py:115} INFO - [2024-09-10 21:03:59,208] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-10T20:46:43.157425+00:00, run_after=2024-09-10T21:46:43.157425+00:00
 [2024-09-10 21:03:59,225] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.774 seconds
+[2024-09-10 21:04:29,350] {processor.py:153} INFO - Started process (PID=205) to work on /opt/airflow/dags/stream.py
+[2024-09-10 21:04:29,351] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-10 21:04:29,351] {logging_mixin.py:115} INFO - [2024-09-10 21:04:29,351] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-10 21:04:30,021] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-10 21:04:30,038] {logging_mixin.py:115} INFO - [2024-09-10 21:04:30,038] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-10 21:04:30,055] {logging_mixin.py:115} INFO - [2024-09-10 21:04:30,055] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-10T20:46:43.157425+00:00, run_after=2024-09-10T21:46:43.157425+00:00
+[2024-09-10 21:04:30,063] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.716 seconds
+[2024-09-10 21:05:00,971] {processor.py:153} INFO - Started process (PID=247) to work on /opt/airflow/dags/stream.py
+[2024-09-10 21:05:00,975] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-10 21:05:00,980] {logging_mixin.py:115} INFO - [2024-09-10 21:05:00,980] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
