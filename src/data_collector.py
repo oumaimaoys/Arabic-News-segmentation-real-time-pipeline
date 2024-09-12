@@ -63,7 +63,7 @@ class Crawler:
         print(f"Collected {len(articles)} articles.")
 
         # Save articles to a JSON file
-        with open('data/training_data.json', 'w', encoding='utf-8') as f:
+        with open('data/training.json', 'w', encoding='utf-8') as f:
             json.dump(articles, f, ensure_ascii=False, indent=4)
 
         self.driver.quit()  # Close the browser session
@@ -75,11 +75,11 @@ class Crawler:
 #crawler = Crawler("https://elmassae24.ma/diver/", "divers")
 #crawler.collect_data()
 
-#crawler = Crawler("https://elmassae24.ma/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/", "economie")
-#crawler.collect_data()
-
-crawler = Crawler("https://elmassae24.ma/%d8%b1%d9%8a%d8%a7%d8%b6%d8%a9/", "sport")
+crawler = Crawler("https://elmassae24.ma/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/", "economie")
 crawler.collect_data()
+
+#crawler = Crawler("https://elmassae24.ma/%d8%b1%d9%8a%d8%a7%d8%b6%d8%a9/", "sport")
+#crawler.collect_data()
 
 
 
