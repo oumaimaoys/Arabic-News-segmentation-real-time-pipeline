@@ -162,6 +162,13 @@ services:
       SPARK_WORKER_CORES: 2
       SPARK_WORKER_MEMORY: 1g
       SPARK_MASTER_URL: spark://spark-master:7077
+    volumes:
+      - ./home/ouyassine/Documents/projects/data_engineering_1/src/spark_stream.py:/app/spark_stream.py
+      - ./home/ouyassine/Documents/projects/data_engineering_1/model:/model
+
+    entrypoint: ["/opt/bitnami/spark/bin/spark-submit", 
+                "--packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:3.4.1,com.datastax.spark:spark-cassandra-connector_2.13:3.4.1",
+                "/app/spark_stream.py"] 
     networks:
       - confluent
 

@@ -1,0 +1,42 @@
+[2024-09-15 12:27:17,014] {processor.py:153} INFO - Started process (PID=47) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:27:17,020] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:27:17,022] {logging_mixin.py:115} INFO - [2024-09-15 12:27:17,022] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:27:17,970] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:27:18,102] {logging_mixin.py:115} INFO - [2024-09-15 12:27:18,102] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:27:18,172] {logging_mixin.py:115} INFO - [2024-09-15 12:27:18,171] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:16.992528+00:00, run_after=2024-09-15T13:27:16.992528+00:00
+[2024-09-15 12:27:18,220] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 1.211 seconds
+[2024-09-15 12:27:49,020] {processor.py:153} INFO - Started process (PID=120) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:27:49,021] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:27:49,022] {logging_mixin.py:115} INFO - [2024-09-15 12:27:49,022] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:27:49,447] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:27:49,471] {logging_mixin.py:115} INFO - [2024-09-15 12:27:49,470] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:27:49,499] {logging_mixin.py:115} INFO - [2024-09-15 12:27:49,499] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:38.595003+00:00, run_after=2024-09-15T13:27:38.595003+00:00
+[2024-09-15 12:27:49,515] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.500 seconds
+[2024-09-15 12:28:19,824] {processor.py:153} INFO - Started process (PID=162) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:28:19,825] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:28:19,826] {logging_mixin.py:115} INFO - [2024-09-15 12:28:19,826] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:28:20,999] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:28:21,031] {logging_mixin.py:115} INFO - [2024-09-15 12:28:21,031] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:28:21,063] {logging_mixin.py:115} INFO - [2024-09-15 12:28:21,063] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:38.595003+00:00, run_after=2024-09-15T13:27:38.595003+00:00
+[2024-09-15 12:28:21,076] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 1.257 seconds
+[2024-09-15 12:28:51,761] {processor.py:153} INFO - Started process (PID=206) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:28:51,762] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:28:51,763] {logging_mixin.py:115} INFO - [2024-09-15 12:28:51,763] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:28:52,125] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:28:52,149] {logging_mixin.py:115} INFO - [2024-09-15 12:28:52,149] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:28:52,174] {logging_mixin.py:115} INFO - [2024-09-15 12:28:52,174] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:38.595003+00:00, run_after=2024-09-15T13:27:38.595003+00:00
+[2024-09-15 12:28:52,188] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.432 seconds
+[2024-09-15 12:29:22,553] {processor.py:153} INFO - Started process (PID=248) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:29:22,554] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:29:22,554] {logging_mixin.py:115} INFO - [2024-09-15 12:29:22,554] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:29:22,897] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:29:22,928] {logging_mixin.py:115} INFO - [2024-09-15 12:29:22,928] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:29:22,952] {logging_mixin.py:115} INFO - [2024-09-15 12:29:22,952] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:38.595003+00:00, run_after=2024-09-15T13:27:38.595003+00:00
+[2024-09-15 12:29:22,964] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.416 seconds
+[2024-09-15 12:29:53,334] {processor.py:153} INFO - Started process (PID=290) to work on /opt/airflow/dags/stream.py
+[2024-09-15 12:29:53,335] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-15 12:29:53,336] {logging_mixin.py:115} INFO - [2024-09-15 12:29:53,336] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-15 12:29:53,856] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-15 12:29:53,882] {logging_mixin.py:115} INFO - [2024-09-15 12:29:53,882] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-15 12:29:53,909] {logging_mixin.py:115} INFO - [2024-09-15 12:29:53,909] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-15T12:27:38.595003+00:00, run_after=2024-09-15T13:27:38.595003+00:00
+[2024-09-15 12:29:53,923] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.593 seconds
