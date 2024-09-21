@@ -1,0 +1,32 @@
+[2024-09-17 14:21:39,042] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: scrapy_spiders_dag.run_hespress_task manual__2024-09-17T14:21:37.693312+00:00 [queued]>
+[2024-09-17 14:21:39,066] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: scrapy_spiders_dag.run_hespress_task manual__2024-09-17T14:21:37.693312+00:00 [queued]>
+[2024-09-17 14:21:39,066] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-17 14:21:39,066] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2024-09-17 14:21:39,066] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-17 14:21:39,105] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): run_hespress_task> on 2024-09-17 14:21:37.693312+00:00
+[2024-09-17 14:21:39,118] {standard_task_runner.py:52} INFO - Started process 89 to run task
+[2024-09-17 14:21:39,126] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'scrapy_spiders_dag', 'run_hespress_task', 'manual__2024-09-17T14:21:37.693312+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/stream.py', '--cfg-path', '/tmp/tmps91l14uv', '--error-file', '/tmp/tmpd9hmz4j1']
+[2024-09-17 14:21:39,127] {standard_task_runner.py:80} INFO - Job 68: Subtask run_hespress_task
+[2024-09-17 14:21:39,255] {task_command.py:370} INFO - Running <TaskInstance: scrapy_spiders_dag.run_hespress_task manual__2024-09-17T14:21:37.693312+00:00 [running]> on host 5a198500bf4d
+[2024-09-17 14:21:39,395] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrapy_spiders_dag
+AIRFLOW_CTX_TASK_ID=run_hespress_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-09-17T14:21:37.693312+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-09-17T14:21:37.693312+00:00
+[2024-09-17 14:21:39,399] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.18.0.8', 29092)]>: connecting to broker:29092 [('172.18.0.8', 29092) IPv4]
+[2024-09-17 14:21:39,399] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-09-17 14:21:39,401] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.18.0.8', 29092)]>: Connection complete.
+[2024-09-17 14:21:39,513] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-09-17 14:21:39,514] {conn.py:1269} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-09-17 14:21:40,199] {conn.py:381} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.18.0.8', 29092)]>: connecting to broker:29092 [('172.18.0.8', 29092) IPv4]
+[2024-09-17 14:21:40,200] {conn.py:410} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.18.0.8', 29092)]>: Connection complete.
+[2024-09-17 14:21:40,200] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connected> [IPv4 ('172.18.0.8', 29092)]>: Closing connection. 
+[2024-09-17 14:21:40,336] {conn.py:919} INFO - <BrokerConnection node_id=1 host=broker:29092 <connected> [IPv4 ('172.18.0.8', 29092)]>: Closing connection. 
+[2024-09-17 14:21:40,337] {python.py:173} INFO - Done. Returned value was: None
+[2024-09-17 14:21:40,357] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=scrapy_spiders_dag, task_id=run_hespress_task, execution_date=20240917T142137, start_date=20240917T142139, end_date=20240917T142140
+[2024-09-17 14:21:40,402] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-09-17 14:21:40,455] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,34 @@
+[2024-09-21 12:36:57,743] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: scrapy_spiders_dag.run_hespress_spark_job manual__2024-09-21T12:36:53.414802+00:00 [queued]>
+[2024-09-21 12:36:57,768] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: scrapy_spiders_dag.run_hespress_spark_job manual__2024-09-21T12:36:53.414802+00:00 [queued]>
+[2024-09-21 12:36:57,768] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-21 12:36:57,768] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2024-09-21 12:36:57,768] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-21 12:36:57,793] {taskinstance.py:1378} INFO - Executing <Task(SparkSubmitOperator): run_hespress_spark_job> on 2024-09-21 12:36:53.414802+00:00
+[2024-09-21 12:36:57,801] {standard_task_runner.py:52} INFO - Started process 121 to run task
+[2024-09-21 12:36:57,805] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'scrapy_spiders_dag', 'run_hespress_spark_job', 'manual__2024-09-21T12:36:53.414802+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/stream.py', '--cfg-path', '/tmp/tmp6hzhohac', '--error-file', '/tmp/tmpgc5zt_76']
+[2024-09-21 12:36:57,806] {standard_task_runner.py:80} INFO - Job 141: Subtask run_hespress_spark_job
+[2024-09-21 12:36:57,884] {task_command.py:370} INFO - Running <TaskInstance: scrapy_spiders_dag.run_hespress_spark_job manual__2024-09-21T12:36:53.414802+00:00 [running]> on host 6cc6c21077c9
+[2024-09-21 12:36:57,985] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrapy_spiders_dag
+AIRFLOW_CTX_TASK_ID=run_hespress_spark_job
+AIRFLOW_CTX_EXECUTION_DATE=2024-09-21T12:36:53.414802+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-09-21T12:36:53.414802+00:00
+[2024-09-21 12:36:57,998] {spark_submit.py:218} INFO - Could not load connection string spark_default, defaulting to yarn
+[2024-09-21 12:36:57,999] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master yarn --packages org.apache.hadoop:hadoop-aws:3.2.0 --name arrow-spark /opt/spark-scripts/hespress_spark_script.py
+[2024-09-21 12:36:58,171] {spark_submit.py:490} INFO - /home/***/.local/lib/python3.7/site-packages/pyspark/bin/spark-class: line 71: /usr/lib/jvm/java-11-openjdk-amd64/bin/java: No such file or directory
+[2024-09-21 12:36:58,172] {spark_submit.py:490} INFO - /home/***/.local/lib/python3.7/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+[2024-09-21 12:36:58,204] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --packages org.apache.hadoop:hadoop-aws:3.2.0 --name arrow-spark /opt/spark-scripts/hespress_spark_script.py. Error code is: 1.
+[2024-09-21 12:36:58,211] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=scrapy_spiders_dag, task_id=run_hespress_spark_job, execution_date=20240921T123653, start_date=20240921T123657, end_date=20240921T123658
+[2024-09-21 12:36:58,235] {standard_task_runner.py:97} ERROR - Failed to execute job 141 for task run_hespress_spark_job (Cannot execute: spark-submit --master yarn --packages org.apache.hadoop:hadoop-aws:3.2.0 --name arrow-spark /opt/spark-scripts/hespress_spark_script.py. Error code is: 1.; 121)
+[2024-09-21 12:36:58,260] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-09-21 12:36:58,315] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

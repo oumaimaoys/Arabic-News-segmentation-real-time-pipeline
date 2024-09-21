@@ -7,6 +7,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 import logging
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
+
 
 def scrape_hespress():
     try:
@@ -98,6 +100,8 @@ default_args = {
     'start_date': days_ago(1)
 }
 
+
+
 # Create the DAG
 dag = DAG(
     'scrapy_spiders_dag',
@@ -126,5 +130,33 @@ run_yaoum_task = PythonOperator(
     dag=dag,
 )
 
+run_hespress_spark_job = SparkSubmitOperator(
+    task_id="run_hespress_spark_job",
+    application="/opt/spark-scripts/hespress_spark_script.py",
+    conn_id="spark_default",
+    packages="org.apache.hadoop:hadoop-aws:3.2.0",
+    task_concurrency=1,
+    dag=dag
+)
+
+run_massae_spark_job = SparkSubmitOperator(
+    task_id="run_massae_spark_job",
+    application="/opt/spark-scripts/massae_spark_script.py",
+    conn_id="spark_default",
+    packages="org.apache.hadoop:hadoop-aws:3.2.0",
+    task_concurrency=1,
+    dag=dag
+)
+
+run_yaoum_spark_job = SparkSubmitOperator(
+    task_id="run_yaoum_spark_job",
+    application="/opt/spark-scripts/yaoum_spark_script.py",
+    conn_id="spark_default",
+    packages="org.apache.hadoop:hadoop-aws:3.2.0",
+    task_concurrency=1,
+    dag=dag
+)
 # Set task dependencies
-run_hespress_task >> run_massae_task >> run_yaoum_task
+run_hespress_task >> run_hespress_spark_job
+run_massae_task >> run_massae_spark_job
+run_yaoum_task >> run_yaoum_spark_job
