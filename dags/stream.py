@@ -134,6 +134,10 @@ run_hespress_spark_job = SparkSubmitOperator(
     task_id="run_hespress_spark_job",
     application="/opt/spark-scripts/hespress_spark_script.py",
     conn_id="spark_default",
+    env_vars={
+            'HADOOP_CONF_DIR': '/etc/hadoop/conf',  # Update this path as needed
+            'YARN_CONF_DIR': '/etc/hadoop/conf',     # Update this path as needed
+        },
     packages="org.apache.hadoop:hadoop-aws:3.2.0",
     task_concurrency=1,
     dag=dag
@@ -143,6 +147,10 @@ run_massae_spark_job = SparkSubmitOperator(
     task_id="run_massae_spark_job",
     application="/opt/spark-scripts/massae_spark_script.py",
     conn_id="spark_default",
+    env_vars={
+            'HADOOP_CONF_DIR': '/etc/hadoop/conf',  # Update this path as needed
+            'YARN_CONF_DIR': '/etc/hadoop/conf',     # Update this path as needed
+        },
     packages="org.apache.hadoop:hadoop-aws:3.2.0",
     task_concurrency=1,
     dag=dag
@@ -152,6 +160,10 @@ run_yaoum_spark_job = SparkSubmitOperator(
     task_id="run_yaoum_spark_job",
     application="/opt/spark-scripts/yaoum_spark_script.py",
     conn_id="spark_default",
+    env_vars={
+            'HADOOP_CONF_DIR': '/etc/hadoop/conf',  # Update this path as needed
+            'YARN_CONF_DIR': '/etc/hadoop/conf',     # Update this path as needed
+        },
     packages="org.apache.hadoop:hadoop-aws:3.2.0",
     task_concurrency=1,
     dag=dag

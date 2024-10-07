@@ -278,3 +278,43 @@
 [2024-09-21 12:37:12,327] {logging_mixin.py:115} INFO - [2024-09-21 12:37:12,326] {dag.py:2379} INFO - Sync 1 DAGs
 [2024-09-21 12:37:12,362] {logging_mixin.py:115} INFO - [2024-09-21 12:37:12,361] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T12:04:51.326705+00:00, run_after=2024-09-21T13:04:51.326705+00:00
 [2024-09-21 12:37:12,385] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.607 seconds
+[2024-09-21 20:17:43,494] {processor.py:153} INFO - Started process (PID=48) to work on /opt/airflow/dags/stream.py
+[2024-09-21 20:17:43,495] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-21 20:17:43,497] {logging_mixin.py:115} INFO - [2024-09-21 20:17:43,497] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-21 20:17:44,726] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py:124 DeprecationWarning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2024-09-21 20:17:44,729] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-21 20:17:44,785] {logging_mixin.py:115} INFO - [2024-09-21 20:17:44,784] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-21 20:17:44,823] {logging_mixin.py:115} INFO - [2024-09-21 20:17:44,823] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T19:17:44.823341+00:00, run_after=2024-09-21T20:17:44.823341+00:00
+[2024-09-21 20:17:44,898] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 1.415 seconds
+[2024-09-21 20:18:15,331] {processor.py:153} INFO - Started process (PID=138) to work on /opt/airflow/dags/stream.py
+[2024-09-21 20:18:15,332] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-21 20:18:15,333] {logging_mixin.py:115} INFO - [2024-09-21 20:18:15,333] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-21 20:18:15,890] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py:124 DeprecationWarning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2024-09-21 20:18:15,892] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-21 20:18:15,920] {logging_mixin.py:115} INFO - [2024-09-21 20:18:15,919] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-21 20:18:15,945] {logging_mixin.py:115} INFO - [2024-09-21 20:18:15,945] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T20:18:11.324756+00:00, run_after=2024-09-21T21:18:11.324756+00:00
+[2024-09-21 20:18:15,962] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.636 seconds
+[2024-09-21 20:18:46,114] {processor.py:153} INFO - Started process (PID=183) to work on /opt/airflow/dags/stream.py
+[2024-09-21 20:18:46,114] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-21 20:18:46,115] {logging_mixin.py:115} INFO - [2024-09-21 20:18:46,115] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-21 20:18:46,775] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py:124 DeprecationWarning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2024-09-21 20:18:46,777] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-21 20:18:46,802] {logging_mixin.py:115} INFO - [2024-09-21 20:18:46,802] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-21 20:18:46,827] {logging_mixin.py:115} INFO - [2024-09-21 20:18:46,827] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T20:18:11.324756+00:00, run_after=2024-09-21T21:18:11.324756+00:00
+[2024-09-21 20:18:46,841] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.730 seconds
+[2024-09-21 20:19:17,418] {processor.py:153} INFO - Started process (PID=225) to work on /opt/airflow/dags/stream.py
+[2024-09-21 20:19:17,419] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-21 20:19:17,419] {logging_mixin.py:115} INFO - [2024-09-21 20:19:17,419] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-21 20:19:17,937] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py:124 DeprecationWarning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2024-09-21 20:19:17,940] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-21 20:19:17,968] {logging_mixin.py:115} INFO - [2024-09-21 20:19:17,968] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-21 20:19:17,998] {logging_mixin.py:115} INFO - [2024-09-21 20:19:17,997] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T20:18:11.324756+00:00, run_after=2024-09-21T21:18:11.324756+00:00
+[2024-09-21 20:19:18,012] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 0.597 seconds
+[2024-09-21 22:29:04,960] {processor.py:153} INFO - Started process (PID=47) to work on /opt/airflow/dags/stream.py
+[2024-09-21 22:29:04,975] {processor.py:641} INFO - Processing file /opt/airflow/dags/stream.py for tasks to queue
+[2024-09-21 22:29:04,978] {logging_mixin.py:115} INFO - [2024-09-21 22:29:04,978] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stream.py
+[2024-09-21 22:29:06,206] {logging_mixin.py:115} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py:124 DeprecationWarning: The 'task_concurrency' parameter is deprecated. Please use 'max_active_tis_per_dag'.
+[2024-09-21 22:29:06,212] {processor.py:651} INFO - DAG(s) dict_keys(['scrapy_spiders_dag']) retrieved from /opt/airflow/dags/stream.py
+[2024-09-21 22:29:06,264] {logging_mixin.py:115} INFO - [2024-09-21 22:29:06,264] {dag.py:2379} INFO - Sync 1 DAGs
+[2024-09-21 22:29:06,358] {logging_mixin.py:115} INFO - [2024-09-21 22:29:06,358] {dag.py:2927} INFO - Setting next_dagrun for scrapy_spiders_dag to 2024-09-21T21:29:06.358319+00:00, run_after=2024-09-21T22:29:06.358319+00:00
+[2024-09-21 22:29:06,405] {processor.py:161} INFO - Processing /opt/airflow/dags/stream.py took 1.453 seconds
