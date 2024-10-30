@@ -1,0 +1,7 @@
+beautifulsoup4
+kafka-python
+lxml
+python-decouple
+requests
+pandas
+numpy

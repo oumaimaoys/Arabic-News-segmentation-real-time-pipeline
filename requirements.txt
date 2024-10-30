@@ -1,4 +1,8 @@
-
+lxml
+python-decouple
+apache-airflow-providers-apache-spark
+requests
+pandas
 beautifulsoup4
 kafka-python
-apache-airflow-providers-apache-spark
+numpy

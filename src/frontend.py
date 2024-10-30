@@ -19,33 +19,18 @@ def read_data_from_s3(bucket_name, key):
     df = pd.read_csv(StringIO(body))
     return df
 
-def create_wordcloud(text):
-    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
-    plt.figure(figsize=(10, 5))
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.axis('off')
-    
-    # Save to a BytesIO object
-    img = io.BytesIO()
-    plt.savefig(img, format='png')
-    plt.close()
-    img.seek(0)  # Rewind the data
-    return base64.b64encode(img.getvalue()).decode()
-
-
 app = dash.Dash(__name__)
 
 '''
 bucket_name = "headlines1234bucket"
-csv_file = f"s3a://{bucket_name}/predictions_hespress/predictions.csv" #change later
+csv_file = f"s3a://{bucket_name}/hespress_pred/predictions.csv" #change later
 
 # Fetch data from S3 bucket
 df = read_data_from_s3(bucket_name, key)
 '''
 df = pd.read_csv("/home/ouyassine/Documents/projects/data_engineering_1/data/fake_date.csv")
 
-# Create a bar chart for topic distribution
-fig = px.bar(df, x='topic', title="Topic Distribution")
+
 
 #create a pie chart
 fig_2 = px.pie(df, names='topic', title="Topic Distribution")
@@ -55,41 +40,44 @@ text = ' '.join(df['title'].astype(str) + ' ' + df['topic'].astype(str))
 
 
 app.layout = html.Div([
-    html.H1("News Headlines Topic Classification"),
-    dcc.Graph(figure=fig),
+    html.H1("News Headlines Topic Classification", style={'textAlign': 'center'}  ),
     dcc.Graph(figure=fig_2),
-    dcc.Graph(id='wordcloud-graph', config={'displayModeBar': False})
 
+    html.H1("Article Filter"),
+    
+    dcc.Dropdown(
+        id='topic-dropdown',
+        options=[
+            {'label': 'Sport', 'value': 'sport'},
+            {'label': 'Divers', 'value': 'divers'},
+            {'label': 'Politique', 'value': 'politique'},
+            {'label': 'Economie', 'value': 'economie'}
+        ],
+        value='sport',  # Default value
+        clearable=False
+    ),
+    
+    html.Div(id='articles-list')
+    
 ])
 
+# Callback to update the articles list based on selected topic
 @app.callback(
-    Output('wordcloud-graph', 'figure'),
-    Input('wordcloud-graph', 'id')  # Just a trigger to generate on load
+    Output('articles-list', 'children'),
+    Input('topic-dropdown', 'value')
 )
-def update_wordcloud(_):
-    img_data = create_wordcloud(text)
-    return {
-        'data': [],
-        'layout': {
-            'images': [{
-                'source': f'data:image/png;base64,{img_data}',
-                'xref': 'paper',
-                'yref': 'paper',
-                'x': 0,
-                'y': 1,
-                'sizex': 1,
-                'sizey': 1,
-                'xanchor': 'left',
-                'yanchor': 'top',
-                'opacity': 1,
-                'layer': 'above'
-            }],
-            'xaxis': {'showgrid': False, 'zeroline': False, 'visible': False},
-            'yaxis': {'showgrid': False, 'zeroline': False, 'visible': False},
-            'height': 500,
-            'width': 800,
-        }
-    }
+def update_articles(selected_topic):
+    # Filter articles based on selected topic
+    filtered_articles = df[df['topic'] == selected_topic]
+    
+    # Create a list of article titles
+    article_titles = filtered_articles['title'].tolist()
+    
+    # Return the article titles as a list of HTML elements
+    return html.Ul([html.Li(title) for title in article_titles])
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
